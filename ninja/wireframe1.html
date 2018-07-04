@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Ninja Turtle</title>
+    <script>
+        $(document).ready(function(){
+
+            $("#wrapper").css("background-color","black");
+            $("button").hover(function(){  
+                var mySource = $(this).attr("data-source");
+                console.log(mySource);
+                $("#wrapper").css("background-image", "url('" + mySource + "')");     
+            }, function(){
+                $("#wrapper").css("background-color", "black"); 
+            });
+            $("button").click(function(){
+                var mySource = $(this).attr("data-source");
+                console.log(mySource);
+                $("#wrapper").css("background-image", "url('" + mySource + "')");
+                $("#wireframe1").css("display", "none");
+                $("#wireframe2").css("display", "block");    
+            })
+            $("select").mouseleave(function(){
+                var pickImg = $("#player1 option:selected").text();
+                var srcImg = $("#player1 option:selected").attr("data-pic");
+                console.log(srcImg);
+                console.log(pickImg);
+                $("#left").html("<img src="+ srcImg +">");
+                $('#left img').css("width", "200px");
+            })
+            $("select").mouseleave(function(){
+                var pickImg = $("#player2 option:selected").text();
+                var srcImg = $("#player2 option:selected").attr("data-pic");
+                console.log(srcImg);
+                console.log(pickImg);
+                $("#right").html("<img src="+ srcImg +">");
+                $('#right img').css("width", "200px");
+            })
+        });    
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="wireframe1">
+            <h3>Select Arena</h3>
+            <button id="beach" data-source="img/beach.jpg">beach</button>
+            <button id="planet" data-source="img/earth.jpg">planet</button>
+            <button id="dojo" data-source="img/dojo.jpg">dojo</button>
+            <button id="forest" data-source="img/forest.jpg">forest</button>
+            <button id="matrix" data-source="img/matrix.jpg">matrix</button>
+            <button id="snow" data-source="img/snow.jpg">snow</button>
+        </div>
+        <div id="wireframe2" style="display:none;">
+                <h3>Select Players</h3>
+                <select name="player1" id="player1">
+                    <option value="donny" data-pic="img/donny.png">Donny</option>
+                    <option value="mikey" data-pic="img/mikey.png">Mikey</option>
+                </select>
+                <select name="player2" id="player2">
+                    <option value="leo" data-pic="img/leo.png">Leo</option>
+                    <option value="raphael" data-pic="img/raphael.png">Raphael</option>
+                </select>
+        </div>
+        <div id="left">
+        </div>
+        <div id="right">
+            </div>
+    </div>    
+</body>
+</html>

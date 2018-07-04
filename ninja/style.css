@@ -1,0 +1,48 @@
+#wrapper{
+    width: 970px;
+    height: 600px;
+    margin: 0 auto;
+    border: 5px solid grey;
+    border-radius: 10px;
+    position: relative;
+}
+
+#wireframe1, #wireframe2 {
+    width: 500px;
+    height: 200px;
+    background-color: grey;
+    border: 2px solid yellow;
+    color: white;
+    text-align: center;
+    margin: 120px 220px;
+}
+h3 {
+    font-size: 30px;
+}
+
+#wireframe1 button {
+    width: 150px;
+    height: 35px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 50px;
+    height: 70px;
+}
+
+#left {
+    position: absolute;
+    float: left;
+    clear: left;
+    left: 0;
+    bottom: 10px;
+}
+#right {
+    position: absolute;
+    float: right;
+    clear: right;
+    right: 100px;
+    bottom: 10px;
+}

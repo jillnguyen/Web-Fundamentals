@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <meta charset='UTF-8'>
+    </head>
+    <body>
+        
+        <h2>My Registration Form</h2>
+        
+        <form action="" method="">
+    
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name"></br>
+
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name"></br>
+  
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email"></br>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"></br>
+
+            <label for="password2">PW Confirm</label>
+            <input type="password" id="password2" name="password2"></br>
+
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday"></br>
+
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="male">
+
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="female">
+
+            <label for="other">Other</label>
+            <input type="radio" id="other" name="other"></br>
+
+            <p> A short description about yourself: </p>
+            <textarea name="description" form="description">Enter here..</textarea></br>
+        
+            <p> Favourite Language 
+            <select name="languages" form="languages">
+                <option value="Javascript">Javascript</option>
+                <option value="Python">Python</option>
+                <option value="PHP">PHP</option>
+                <option value="Ruby on Rails">Ruby on Rails</option>
+                <option value="MEAN">MEAN</option>
+                <option value="Java">Java</option>
+            </select>    
+            </p>
+            
+            <input type="submit" id="submit_button" name="submit_button">
+
+        </form>
+    </body>
+</html>
